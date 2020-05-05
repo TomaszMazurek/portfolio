@@ -1,35 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-frontend/gui/node_modules
-frontend/src/build
-backend/env
+frontend/gui/node_modules/
+backend/env/
+*.pyc
 
 *.log
-*.pot
-*.pyc
-__pycache__/
-local_settings.py
-
-.env
-db.sqlite3
-
-/.pnp
-.pnp.js
-
-# testing
-frontend/gui/coverage
-
-# production
-frontend/gui/build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+*.sql
+*.sqlite
+*.sqlite3

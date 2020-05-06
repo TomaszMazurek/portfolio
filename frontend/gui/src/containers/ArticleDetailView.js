@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
-import { Card } from "antd";
+import { Button, Card } from "antd";
+import ArticleForm from "../components/Form";
 
 class ArticleDetail extends React.Component {
   state = {
@@ -16,11 +17,28 @@ class ArticleDetail extends React.Component {
     });
   }
 
+  handleDelete = (event) => {
+    const articleID = this.props.match.params.articleID;
+    axios.delete(`http://127.0.0.1:8000/api/${articleID}`);
+  };
+
   render() {
     return (
-      <Card title={this.state.article.title}>
-        <p> {this.state.article.content}</p>
-      </Card>
+      <div>
+        <Card title={this.state.article.title}>
+          <p> {this.state.article.content}</p>
+        </Card>
+        <ArticleForm
+          requestType="put"
+          articleID={this.props.match.params.articleID}
+          btnText="Update"
+        />
+        <form onSubmit={this.handleDelete}>
+          <Button type="danger" htmlType="submit">
+            Delete
+          </Button>
+        </form>
+      </div>
     );
   }
 }

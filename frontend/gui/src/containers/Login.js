@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Input, Button, Spin } from "antd";
+import { Form, Input, Button, Spin, Result } from "antd";
 import {
   LoadingOutlined,
   QuestionCircleOutlined,
@@ -43,7 +43,21 @@ class LoginForm extends React.Component {
     return (
       <div>
         {errorMesage}
-        {this.props.loading ? (
+        {this.props.isAuthenticated ? (
+          <Result
+            status="success"
+            title="Successfully logged in"
+            extra={[
+              <Button
+                type="primary"
+                onClick={this.props.logout}
+                style={{ margin: "auto", display: "block" }}
+              >
+                Logout
+              </Button>,
+            ]}
+          />
+        ) : this.props.loading ? (
           <Spin indicator={antIcon} />
         ) : (
           <Form
@@ -110,6 +124,7 @@ const mapStateToProps = (state) => {
   return {
     loading: state.loading,
     error: state.error,
+    isAuthenticated: state.token != null,
   };
 };
 
@@ -117,6 +132,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onAuth: (username, password) =>
       dispatch(actions.authLogin(username, password)),
+    logout: () => dispatch(actions.logout()),
   };
 };
 

@@ -41,16 +41,18 @@ const Articles = (props) => {
               key="list-vertical-message"
             />,
           ]}
-          extra={
-            <img
-              width={272}
-              alt="logo"
-              src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
-            />
-          }
         >
           <List.Item.Meta
-            avatar={<Avatar src={item.avatar} />}
+            style={{
+              color: "rgb(220,220,220,0.65)",
+              textAlign: "left",
+              paddingTop: "17px",
+              wordSpacing: "5px",
+              textShadow: "2px 2px 5px dark-blue",
+              fontFamily: "Tahoma, Geneva, sans-serif",
+              fontWeight: "lighter",
+              fontSize: "17px",
+            }}
             title={<a href={`/${item.id}`}>{item.title}</a>}
             description={item.description}
           />

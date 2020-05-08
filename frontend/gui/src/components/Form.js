@@ -2,6 +2,8 @@ import React from "react";
 import { Form, Input, Button } from "antd";
 import axios from "axios";
 
+const { TextArea } = Input;
+
 class ArticleForm extends React.Component {
   handleSubmit = (event, requestType, articleID) => {
     console.log("Submitting");
@@ -46,11 +48,15 @@ class ArticleForm extends React.Component {
             )
           }
         >
-          <Form.Item label="Title">
+          <Form.Item>
             <Input name="title" placeholder="Place title here..." />
           </Form.Item>
-          <Form.Item label="Content">
-            <Input name="content" placeholder="Place content here..." />
+          <Form.Item>
+            <TextArea
+              rows={4}
+              name="content"
+              placeholder="Place content here..."
+            />
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit">

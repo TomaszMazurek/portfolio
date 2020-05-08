@@ -14,13 +14,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Router>
-          <MainLayout {...this.props}>
-            <BaseRouter />
-          </MainLayout>
-        </Router>
-      </div>
+      <Router>
+        <MainLayout {...this.props}>
+          <BaseRouter />
+        </MainLayout>
+      </Router>
     );
   }
 }

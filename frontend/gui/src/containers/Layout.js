@@ -90,7 +90,7 @@ class MainLayout extends React.Component {
           </Header>
         </Affix>
 
-        <Content id="content" style={{ padding: "0 50px" }}>
+        <Content id="content" style={{ padding: "0 30em" }}>
           <Breadcrumb style={{ margin: "16px 0" }}>
             <Breadcrumb.Item>
               <Link to={this.props.location.pathname}>
@@ -100,7 +100,9 @@ class MainLayout extends React.Component {
           </Breadcrumb>
           <div className="site-layout-content">{this.props.children}</div>
         </Content>
-        <Footer id="footer" style={{ textAlign: "center" }}></Footer>
+        <Footer id="footer" style={{ textAlign: "center" }}>
+          Tomasz Mazurek ©2020 Created by Tomasz Mazurek
+        </Footer>
       </Layout>
     );
   }

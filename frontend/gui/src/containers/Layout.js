@@ -1,4 +1,5 @@
 import React from "react";
+import Home from "../containers/Home";
 import {
   Layout,
   Menu,
@@ -17,10 +18,11 @@ const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
 
 const keyMap = {
-  "/aboutme": "1",
-  "/projects": "2",
-  "/blog": "3",
-  "/login": "4",
+  "/": "1",
+  "/aboutme": "2",
+  "/projects": "3",
+  "/blog": "4",
+  "/login": "5",
 };
 
 class MainLayout extends React.Component {
@@ -80,20 +82,31 @@ class MainLayout extends React.Component {
                   style={{ textAlign: "right" }}
                 >
                   <Menu.Item key="1">
-                    <Link to="/aboutme">About Me</Link>
+                    <Link to="/">Home</Link>
                   </Menu.Item>
                   <Menu.Item key="2">
-                    <Link to="/projects">Projects</Link>
+                    <Link to="/aboutme">About Me</Link>
                   </Menu.Item>
                   <Menu.Item key="3">
+                    <Link to="/projects">Projects</Link>
+                  </Menu.Item>
+                  <Menu.Item key="4">
                     <Link to="/blog">Blog</Link>
                   </Menu.Item>
+                  <Menu.Item key="6">
+                    <a
+                      target="_blank"
+                      href="http://0.0.0.0:8000/materialEditor/"
+                    >
+                      Material Editor
+                    </a>
+                  </Menu.Item>
                   {this.props.isAuthenticated ? (
-                    <Menu.Item key="4" onClick={this.props.logout}>
+                    <Menu.Item key="5" onClick={this.props.logout}>
                       <Link to="/login">Logout</Link>
                     </Menu.Item>
                   ) : (
-                    <Menu.Item key="4">
+                    <Menu.Item key="5">
                       <Link to="/login">Login</Link>
                     </Menu.Item>
                   )}
@@ -102,14 +115,30 @@ class MainLayout extends React.Component {
             </Row>
           </Header>
         </Affix>
-
-        <Content id="content" style={{ padding: "0 30em" }}>
-          <Breadcrumb style={{ margin: "16px 0" }}>
-            {this.createBreadCrumbItems()}
-          </Breadcrumb>
-          <div className="site-layout-content">{this.props.children}</div>
-        </Content>
-        <Footer id="footer" style={{ textAlign: "center" }}>
+        {this.props.location.pathname === "/" ? (
+          <Home />
+        ) : (
+          <Content
+            id="content"
+            style={{
+              padding: "0 30em 4.1em",
+              backgroundColor: "rgb(220,220,220,0.65)",
+            }}
+          >
+            <Breadcrumb style={{ margin: "16px 0" }}>
+              {this.createBreadCrumbItems()}
+            </Breadcrumb>
+            <div className="site-layout-content">{this.props.children}</div>
+          </Content>
+        )}
+        <Footer
+          id="footer"
+          style={{
+            backgroundColor: "rgb(0,21,41)",
+            color: "rgb(220,220,220,0.65)",
+            textAlign: "center",
+          }}
+        >
           Tomasz Mazurek ©2020 Created by Tomasz Mazurek
         </Footer>
       </Layout>

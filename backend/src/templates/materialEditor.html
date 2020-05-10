@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #scene-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            z-index: -1;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            overflow-x:hidden;
+            overflow-y:hidden;
+        }
+    </style>
+</head>
+<body>
+{% load static %}
+
+<div id="scene-container" style="width: 100vw padding: 0 0"></div>
+</body>
+<script type="text/javascript" src="{% static 'materialEditor/libs/three.js' %}"></script>
+<script type="text/javascript" src="{% static 'materialEditor/libs/controls/OrbitControls.js' %}"></script>
+<script type="text/javascript" src="{% static 'materialEditor/libs/dat.gui.js' %}"></script>
+<script type="text/javascript" src="{% static 'materialEditor/scripts/Textures.js' %}"></script>
+<script type="text/javascript" src="{% static 'materialEditor/scripts/Light.js' %}"></script>
+<script type="text/javascript" src="{% static 'materialEditor/scripts/Material.js' %}"></script>
+<script type="text/javascript" src="{% static 'materialEditor/scripts/Shape.js' %}"></script>
+<script type="text/javascript" src="{% static 'materialEditor/scripts/GUI.js' %}"></script>
+<script type="text/javascript" src="{% static 'materialEditor/main.js' %}"></script>
+
+</html>

@@ -6,10 +6,11 @@ import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import AboutMe from "./containers/AboutMe";
 import Projects from "./containers/Projects";
-import MaterialEditor from "./MaterialEditor/MaterialEditor";
+import Home from "./containers/Home";
 
 const BaseRouter = () => (
   <div>
+    <Route exact path="/" component={Home} />{" "}
     <Route exact path="/aboutme/" component={AboutMe} />{" "}
     <Route exact path="/projects/" component={Projects} />{" "}
     <Route exact path="/blog/" component={ArticleList} />{" "}

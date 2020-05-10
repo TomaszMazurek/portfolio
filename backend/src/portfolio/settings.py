@@ -52,17 +52,17 @@ INSTALLED_APPS = [
 ]
 
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+""" STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "../../staticfiles"), )
+"""
 
-""" STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "staticfiles"), ) """
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "staticfiles"), )
 
 SITE_ID = 1
 
@@ -149,7 +149,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny'
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
-      'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     )
 }
 CORS_ORIGIN_ALLOW_ALL = True

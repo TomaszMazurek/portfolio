@@ -33,6 +33,19 @@ class MainLayout extends React.Component {
       key: event.key,
     });
   };
+
+  createBreadCrumbItems() {
+    const paths = this.props.location.pathname.split("/");
+    const items = [];
+    for (let i = 0; i < paths.length; i++) {
+      items.push(
+        <Breadcrumb.Item key={i}>
+          <Link to={"/" + paths[i]}>{paths[i]}</Link>
+        </Breadcrumb.Item>
+      );
+    }
+    return items;
+  }
   render() {
     let selectedKey = [keyMap[this.props.location.pathname]];
     return (
@@ -92,11 +105,7 @@ class MainLayout extends React.Component {
 
         <Content id="content" style={{ padding: "0 30em" }}>
           <Breadcrumb style={{ margin: "16px 0" }}>
-            <Breadcrumb.Item>
-              <Link to={this.props.location.pathname}>
-                {this.props.location.pathname.split("/")[1]}
-              </Link>
-            </Breadcrumb.Item>
+            {this.createBreadCrumbItems()}
           </Breadcrumb>
           <div className="site-layout-content">{this.props.children}</div>
         </Content>

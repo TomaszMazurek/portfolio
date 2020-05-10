@@ -25,21 +25,10 @@ const Articles = (props) => {
         <List.Item
           key={item.title}
           actions={[
-            <IconText
-              icon={StarOutlined}
-              text="156"
-              key="list-vertical-star-o"
-            />,
-            <IconText
-              icon={LikeOutlined}
-              text="156"
-              key="list-vertical-like-o"
-            />,
-            <IconText
-              icon={MessageOutlined}
-              text="2"
-              key="list-vertical-message"
-            />,
+            <div>
+              {item.created_date.split("T")[0]} /{" "}
+              {item.created_date.split("T")[1].split(".")[0]}
+            </div>,
           ]}
         >
           <List.Item.Meta
@@ -53,7 +42,11 @@ const Articles = (props) => {
               fontWeight: "lighter",
               fontSize: "17px",
             }}
-            title={<a href={`/${item.id}`}>{item.title}</a>}
+            title={
+              <div>
+                <a href={`/blog/${item.id}`}>{item.title} </a>
+              </div>
+            }
             description={item.description}
           />
           {item.content}

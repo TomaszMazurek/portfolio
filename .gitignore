@@ -2,7 +2,11 @@
 
 frontend/gui/node_modules/
 frontend/gui/public/
+frontend/gui/build/
 backend/env/
+backend/src/rest_framework/
+backend/src/admin/
+staticfiles/
 *.pyc
 *.log
 *.sql

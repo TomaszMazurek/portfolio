@@ -14,7 +14,7 @@ class ArticleForm extends React.Component {
     switch (requestType) {
       case "post":
         axios
-          .post("http://127.0.0.1:8000/api/", {
+          .post("/api/", {
             title: title,
             content: content,
           })
@@ -23,7 +23,7 @@ class ArticleForm extends React.Component {
         break;
       case "put":
         axios
-          .put(`http://127.0.0.1:8000/api/${articleID}/`, {
+          .put(`/api/${articleID}/`, {
             title: title,
             content: content,
           })

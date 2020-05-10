@@ -130,7 +130,7 @@ class Projects extends React.Component {
           <img
             style={{ display: "block", margin: "auto" }}
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/projects/me_ui.png"}
+            src={process.env.PUBLIC_URL + "/static/media/me_ui.png"}
             alt="Material Editor UI image"
             width="100%"
           ></img>
@@ -168,7 +168,7 @@ class Projects extends React.Component {
           <img
             style={{ display: "block", margin: "auto" }}
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/projects/me_react.png"}
+            src={process.env.PUBLIC_URL + "/static/media/me_react.png"}
             alt="Material Editor UI image"
             width="100%"
           ></img>
@@ -193,7 +193,7 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
           >
             <source
-              src={process.env.PUBLIC_URL + "/projects/UE4_RPG_Shooter.mp4"}
+              src={process.env.PUBLIC_URL + "/static/media/UE4_RPG_Shooter.mp4"}
               type="video/mp4"
             ></source>
             Your browser does not support HTML video.
@@ -210,7 +210,8 @@ class Projects extends React.Component {
           >
             <source
               src={
-                process.env.PUBLIC_URL + "/projects/Unity_VRSpaceShooter.mp4"
+                process.env.PUBLIC_URL +
+                "/static/media/Unity_VRSpaceShooter.mp4"
               }
               type="video/mp4"
             ></source>
@@ -229,7 +230,7 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             width="80%"
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/projects/pirates_gui.png"}
+            src={process.env.PUBLIC_URL + "/static/media/pirates_gui.png"}
             alt="Pirates Ship Simulation GUI"
           ></img>
           <br />
@@ -252,7 +253,7 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             width="100%"
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/projects/pirates_sea.png"}
+            src={process.env.PUBLIC_URL + "/static/media/pirates_sea.png"}
             alt="Pirates Ship Simulation Sea"
           ></img>
           <br />
@@ -281,7 +282,7 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             width="100%"
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/projects/trainomatic.png"}
+            src={process.env.PUBLIC_URL + "/static/media/trainomatic.png"}
             alt="Train-o-matic"
           ></img>
           <br />
@@ -346,7 +347,7 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             width="100%"
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/projects/schemat.jpg"}
+            src={process.env.PUBLIC_URL + "/static/media/schemat.jpg"}
             alt="RCCar scheme"
           ></img>
         </Paragraph>
@@ -368,7 +369,7 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             width="100%"
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/projects/board.jpg"}
+            src={process.env.PUBLIC_URL + "/static/media/board.jpg"}
             alt="RCCar scheme"
           ></img>
         </Paragraph>
@@ -385,7 +386,7 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             width="100%"
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/projects/app.jpg"}
+            src={process.env.PUBLIC_URL + "/static/media/app.jpg"}
             alt="RCCar scheme"
           ></img>
           <br />

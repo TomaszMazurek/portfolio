@@ -70,7 +70,7 @@ class MainLayout extends React.Component {
                     fontSize: "20px",
                   }}
                 >
-                  <p>Tomasz Mazurek | Portfolio Website</p>
+                  <p>Tom Mazurek | Portfolio Website</p>
                 </Title>
               </Col>
               <Col span={8} offset={8}>

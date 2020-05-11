@@ -86,7 +86,7 @@ class MainLayout extends React.Component {
                   <Menu.Item key="6">
                     <a
                       target="_blank"
-                      href="http://0.0.0.0:8000/materialEditor/"
+                      href="http://192.168.56.102/materialEditor/"
                       rel="noopener noreferrer"
                     >
                       Material Editor

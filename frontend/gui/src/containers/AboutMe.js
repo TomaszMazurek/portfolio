@@ -1,5 +1,6 @@
 import React from "react";
-import { Typography, Divider } from "antd";
+import { Typography, Divider, Button } from "antd";
+import { DownloadOutlined } from "@ant-design/icons";
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -19,19 +20,29 @@ class AboutMe extends React.Component {
           fontSize: "17px",
         }}
       >
-        <Title>Hello</Title>
+        <Title>Hello there!</Title>
         <Paragraph>
-          Hello there! My name is Tom Mazurek. I’m programmer. This is what I do
-          for the living, at least. If you are interested in content more
-          substantial for programming, i would recommend you to go to{" "}
+          My name is Tom Mazurek. I’m programmer. At least, this is what I do
+          for the living. If you are interested in content more substantial for
+          programming, i would recommend you to go to{" "}
           <Text strong>Projects</Text> section. If you are interested in my
-          story, read what's below. I tried to be brief and at the same time to
-          mention all important details that made my who I am and placed me
+          story, read what's below. I tried to be brief and at the same time, to
+          mention all important details, that made my who I am and placed me
           where I am now. I know that in IT things are changing really fast and
           knowledge devaluate every few years. My point in telling this story is
           to show how deep my passion for programming goes and how hungry of new
           challanges i am.
         </Paragraph>
+        <Button
+          type="primary"
+          download
+          href="/static/media/CV_Tomasz_Mazurek.pdf"
+          icon={<DownloadOutlined />}
+          size="large"
+          style={{ margin: "auto", color: "white" }}
+        >
+          Download Resume
+        </Button>
         <Divider />
         <Paragraph>
           <Title> 8 bit</Title>

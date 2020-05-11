@@ -2,28 +2,12 @@ import React from "react";
 import { Form, Input, Button, Spin, Result } from "antd";
 import {
   LoadingOutlined,
-  QuestionCircleOutlined,
+  //QuestionCircleOutlined,
   UserOutlined,
   LockOutlined,
 } from "@ant-design/icons";
-import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../store/actions/auth";
-
-const layout = {
-  labelCol: {
-    span: 8,
-  },
-  wrapperCol: {
-    span: 16,
-  },
-};
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
@@ -107,11 +91,11 @@ class LoginForm extends React.Component {
               >
                 Login
               </Button>
-              Or
+              {/* Or
               <NavLink style={{ marginRight: "10px" }} to="/signup/">
                 {" "}
                 Signup
-              </NavLink>
+              </NavLink> */}
             </Form.Item>
           </Form>
         )}

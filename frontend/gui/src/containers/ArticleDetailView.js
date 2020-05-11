@@ -4,7 +4,6 @@ import { Button, Card } from "antd";
 import ArticleForm from "../components/Form";
 import * as actions from "../store/actions/auth";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
 
 class ArticleDetail extends React.Component {
   state = {

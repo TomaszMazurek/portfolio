@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Material Editor</title>
     <style type="text/css">
         #scene-container {
             position: fixed;
@@ -18,11 +18,42 @@
             overflow-x:hidden;
             overflow-y:hidden;
         }
+        #loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            width: 150px;
+            height: 150px;
+            margin: -75px 0 0 -75px;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+          @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #loaderText {
+            text-align: center;
+            margin-top: 10%;
+        }
     </style>
 </head>
 <body>
 {% load static %}
-
+<div id="loaderText"> <h1>Loading Material Editor Data</h1></div>
+<div id="loader"></div>
 <div id="scene-container" style="width: 100vw padding: 0 0"></div>
 </body>
 <script type="text/javascript" src="{% static 'materialEditor/libs/three.js' %}"></script>

@@ -1,19 +1,9 @@
 import React from "react";
 import Home from "../containers/Home";
-import {
-  Layout,
-  Menu,
-  Breadcrumb,
-  Affix,
-  Avatar,
-  Row,
-  Col,
-  Typography,
-} from "antd";
-import { Link, NavLink, withRouter } from "react-router-dom";
+import { Layout, Menu, Breadcrumb, Affix, Row, Col, Typography } from "antd";
+import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../store/actions/auth";
-import { UserOutlined } from "@ant-design/icons";
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
 
@@ -97,6 +87,7 @@ class MainLayout extends React.Component {
                     <a
                       target="_blank"
                       href="http://0.0.0.0:8000/materialEditor/"
+                      rel="noopener noreferrer"
                     >
                       Material Editor
                     </a>
@@ -159,4 +150,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default withRouter(connect(null, mapDispatchToProps)(MainLayout));
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(MainLayout)
+);

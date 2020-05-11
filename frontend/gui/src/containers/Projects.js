@@ -131,7 +131,7 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             id="me_ui"
             src={process.env.PUBLIC_URL + "/static/media/me_ui.png"}
-            alt="Material Editor UI image"
+            alt="Material Editor UI"
             width="100%"
           ></img>
           <br />
@@ -169,7 +169,7 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             id="me_ui"
             src={process.env.PUBLIC_URL + "/static/media/me_react.png"}
-            alt="Material Editor UI image"
+            alt="Material Editor UI React"
             width="100%"
           ></img>
         </Paragraph>

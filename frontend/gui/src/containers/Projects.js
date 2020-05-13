@@ -16,7 +16,6 @@ class Projects extends React.Component {
   }
 
   render() {
-    console.log("ref: ", this.ref);
     return (
       <Typography
         ref={this.ref}

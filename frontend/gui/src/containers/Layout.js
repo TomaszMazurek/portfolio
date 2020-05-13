@@ -5,7 +5,7 @@ import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../store/actions/auth";
 const { Header, Content, Footer } = Layout;
-const { Title } = Typography;
+const { Text } = Typography;
 
 const keyMap = {
   "/": "1",
@@ -45,25 +45,28 @@ class MainLayout extends React.Component {
         <Affix>
           <Header id="header">
             <div className="logo" />
-            <Row>
-              <Col span={8}>
-                <Title
-                  level={2}
+            <Row style={{ gridRowGap: "20px" }}>
+              <Col
+                flex="300px"
+                style={{ float: "left", width: "50%", height: "10%" }}
+              >
+                <span
                   style={{
                     color: "rgb(220,220,220,0.65)",
-                    textAlign: "left",
-                    paddingTop: "17px",
+                    float: "left",
                     wordSpacing: "5px",
-                    textShadow: "2px 2px 5px dark-blue",
                     fontFamily: "Tahoma, Geneva, sans-serif",
                     fontWeight: "lighter",
-                    fontSize: "20px",
+                    fontSize: 17,
                   }}
                 >
-                  <p>Tom Mazurek | Portfolio Website</p>
-                </Title>
+                  Tom Mazurek | Portfolio Website
+                </span>
               </Col>
-              <Col span={8} offset={8}>
+              <Col
+                flex="auto"
+                style={{ float: "right", width: "50%", height: "10%" }}
+              >
                 <Menu
                   theme="dark"
                   mode="horizontal"
@@ -86,7 +89,7 @@ class MainLayout extends React.Component {
                   <Menu.Item key="6">
                     <a
                       target="_blank"
-                      href="http://192.168.56.102/materialEditor/"
+                      href="http://tommazurek.rocks/materialEditor/"
                       rel="noopener noreferrer"
                     >
                       Material Editor
@@ -106,32 +109,63 @@ class MainLayout extends React.Component {
             </Row>
           </Header>
         </Affix>
-        {this.props.location.pathname === "/" ? (
-          <Home />
-        ) : (
-          <Content
-            id="content"
-            style={{
-              padding: "0 30em 4.1em",
-              backgroundColor: "rgb(220,220,220,0.65)",
-            }}
-          >
-            <Breadcrumb style={{ margin: "16px 0" }}>
-              {this.createBreadCrumbItems()}
-            </Breadcrumb>
-            <div className="site-layout-content">{this.props.children}</div>
-          </Content>
-        )}
-        <Footer
-          id="footer"
-          style={{
-            backgroundColor: "rgb(0,21,41)",
-            color: "rgb(220,220,220,0.65)",
-            textAlign: "center",
-          }}
-        >
-          Tomasz Mazurek ©2020 Created by Tomasz Mazurek
-        </Footer>
+        <Row style={{ borderCollapse: "collapse", gridRowGap: "50px" }}>
+          {this.props.location.pathname === "/" ? (
+            <Col
+              flex="auto"
+              style={{ float: "center", width: "100%", height: "80%" }}
+            >
+              <Home />
+            </Col>
+          ) : (
+            <Col
+              flex="auto"
+              style={{
+                float: "center",
+                width: "100%",
+                height: "80%",
+                marginTop: "25px",
+              }}
+            >
+              <Content
+                id="content"
+                style={{
+                  boxSizing: "border-box",
+                  margin: "40px 15% 20px",
+                  backgroundColor: "rgb(220,220,220,0.65)",
+                }}
+              >
+                <Breadcrumb
+                  style={{
+                    margin: "16px 0",
+                  }}
+                >
+                  {this.createBreadCrumbItems()}
+                </Breadcrumb>
+                <div
+                  className="site-layout-content"
+                  style={{ minWidth: "250px" }}
+                >
+                  {this.props.children}{" "}
+                </div>
+              </Content>
+            </Col>
+          )}
+        </Row>
+        <Row style={{ borderCollapse: "collapse", gridRowGap: "50px" }}>
+          <Col flex="100%" style={{ width: "100%", height: "10%" }}>
+            <Footer
+              id="footer"
+              style={{
+                backgroundColor: "rgb(0,21,41)",
+                color: "rgb(220,220,220,0.65)",
+                textAlign: "center",
+              }}
+            >
+              Tomasz Mazurek ©2020 Created by Tomasz Mazurek
+            </Footer>
+          </Col>
+        </Row>
       </Layout>
     );
   }

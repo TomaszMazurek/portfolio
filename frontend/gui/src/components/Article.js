@@ -1,5 +1,6 @@
 import React from "react";
-import { List } from "antd";
+import { List, Typography } from "antd";
+const { Title, Paragraph } = Typography;
 
 /* const IconText = ({ icon, text }) => (
   <Space>
@@ -14,9 +15,7 @@ const Articles = (props) => {
       itemLayout="vertical"
       size="large"
       pagination={{
-        onChange: (page) => {
-          console.log(page);
-        },
+        onChange: (page) => {},
         pageSize: 3,
       }}
       dataSource={props.data}
@@ -42,13 +41,25 @@ const Articles = (props) => {
               fontSize: "17px",
             }}
             title={
-              <div>
+              <Title level={2}>
                 <a href={`/blog/${item.id}`}>{item.title} </a>
-              </div>
+              </Title>
             }
             description={item.description}
           />
-          {item.content}
+          <Typography
+            style={{
+              textAlign: "left",
+              paddingTop: "17px",
+              wordSpacing: "5px",
+              textShadow: "2px 2px 5px dark-blue",
+              fontFamily: "Tahoma, Geneva, sans-serif",
+              fontWeight: "lighter",
+              fontSize: "17px",
+            }}
+          >
+            {item.content}
+          </Typography>
         </List.Item>
       )}
     />

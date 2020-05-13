@@ -6,8 +6,6 @@ const { TextArea } = Input;
 
 class ArticleForm extends React.Component {
   handleSubmit = (event, requestType, articleID) => {
-    console.log("Submitting");
-
     const title = event.target.elements.title.value;
     const content = event.target.elements.content.value;
 
@@ -18,7 +16,6 @@ class ArticleForm extends React.Component {
             title: title,
             content: content,
           })
-          .then((res) => console.log(res))
           .catch((err) => console.error(err));
         break;
       case "put":
@@ -27,13 +24,12 @@ class ArticleForm extends React.Component {
             title: title,
             content: content,
           })
-          .then((res) => console.log(res))
+          .then()
           .catch((err) => console.err(err));
         break;
       default:
         return;
     }
-    console.log(title, content);
   };
 
   render() {

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import "antd/dist/antd.css";
+import "antd/dist/antd.compact.css";
 import "./App.css";
 import MainLayout from "./containers/Layout";
 import { BrowserRouter as Router } from "react-router-dom";

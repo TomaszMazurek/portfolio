@@ -31,7 +31,7 @@ class MainLayout extends React.Component {
     const items = [];
     for (let i = 0; i < paths.length; i++) {
       items.push(
-        <Breadcrumb.Item key={i}>
+        <Breadcrumb.Item key={i} style={{ fontSize: 16 }}>
           <Link to={"/" + paths[i]}>{paths[i]}</Link>
         </Breadcrumb.Item>
       );
@@ -45,10 +45,15 @@ class MainLayout extends React.Component {
         <Affix>
           <Header id="header">
             <div className="logo" />
-            <Row style={{ gridRowGap: "20px" }}>
+            <Row style={{ height: "inherit" }}>
               <Col
-                flex="300px"
-                style={{ float: "left", width: "50%", height: "10%" }}
+                flex="auto"
+                style={{
+                  float: "left",
+                  width: "50%",
+                  height: "inherit",
+                  overflow: "hidden",
+                }}
               >
                 <span
                   style={{
@@ -57,7 +62,7 @@ class MainLayout extends React.Component {
                     wordSpacing: "5px",
                     fontFamily: "Tahoma, Geneva, sans-serif",
                     fontWeight: "lighter",
-                    fontSize: 17,
+                    fontSize: 18,
                   }}
                 >
                   Tom Mazurek | Portfolio Website
@@ -65,14 +70,14 @@ class MainLayout extends React.Component {
               </Col>
               <Col
                 flex="auto"
-                style={{ float: "right", width: "50%", height: "10%" }}
+                style={{ float: "300px", width: "50%", height: "10%" }}
               >
                 <Menu
                   theme="dark"
                   mode="horizontal"
                   selectedKeys={selectedKey}
                   onClick={this.handleClick}
-                  style={{ textAlign: "right" }}
+                  style={{ textAlign: "right", fontSize: 17 }}
                 >
                   <Menu.Item key="1">
                     <Link to="/">Home</Link>
@@ -124,27 +129,25 @@ class MainLayout extends React.Component {
                 float: "center",
                 width: "100%",
                 height: "80%",
-                marginTop: "25px",
               }}
             >
               <Content
                 id="content"
                 style={{
                   boxSizing: "border-box",
-                  margin: "40px 15% 20px",
-                  backgroundColor: "rgb(220,220,220,0.65)",
+                  margin: "0 20% 40px",
                 }}
               >
                 <Breadcrumb
                   style={{
-                    margin: "16px 0",
+                    padding: "1em 0",
                   }}
                 >
                   {this.createBreadCrumbItems()}
                 </Breadcrumb>
                 <div
                   className="site-layout-content"
-                  style={{ minWidth: "250px" }}
+                  style={{ minWidth: "250px", padding: "5% 10%" }}
                 >
                   {this.props.children}{" "}
                 </div>
@@ -160,6 +163,7 @@ class MainLayout extends React.Component {
                 backgroundColor: "rgb(0,21,41)",
                 color: "rgb(220,220,220,0.65)",
                 textAlign: "center",
+                fontSize: 20,
               }}
             >
               Tomasz Mazurek ©2020 Created by Tomasz Mazurek

@@ -205,27 +205,27 @@ class AboutMe extends React.Component {
           time with computers. Told me to give another try with college. Our 3
           kids was attending elementary school so life was becoming more stable.
           I closed my inherited, family bussiness and enrolled in the University
-          of Technology to study computer science. After 20 years I attending
-          school i was dreaming of. That was really weird experience. I found my
-          first IT job in local firm which was servicing IT infrastructure in
-          local coal mines. It was simple IT suport job. I got plenty of free
-          time to learn. Thanks to this job I was able to make up for the lost
-          time. At the end of first semester, unexpectedly turned out my family
-          will get bigger again. Things got really complicated but with suport
-          of my wife I was able to pass first two terms. After a year i’ve moved
-          to programming department where for next 3 months I was working with
-          X++ language. After being promoted three times without any rise and
-          with my contract hasn’t being renewed, i started to look for another
-          job. Fortunatelly, friend I was working with has information about
-          graphics programmer position. I applied for this job and got in. This
-          is how I started my work for selfcad.com. I knew things or two about
-          3d graphics programming and javascript but three.js was something I
-          had to learn from scratch. It took me few weeks but I eventually
-          catched up with this technology. After 6 months I was doing mid/senior
-          work. I got my balchelor degree in February 2020 after 3.5 years, with
-          average 4.5, exemption from most of the exams (including technical
-          english C1) and over two years of professional experience. It's my
-          late debut. Now im ready for more :)
+          of Technology to study computer science. After 20 years I started
+          attending school i was dreaming of. That was really weird experience.
+          I found my first IT job in local firm which was servicing IT
+          infrastructure in local coal mines. It was simple IT suport job. I got
+          plenty of free time to learn. Thanks to this job I was able to make up
+          for the lost time. At the end of first semester, unexpectedly turned
+          out my family will get bigger again. Things got really complicated but
+          with suport of my wife I was able to pass first two terms. After a
+          year i’ve moved to programming department where for next 3 months I
+          was working with X++ language. After being promoted three times
+          without any rise and with my contract hasn’t being renewed, i started
+          to look for another job. Fortunatelly, friend I was working with has
+          information about graphics programmer position. I applied for this job
+          and got in. This is how I started my work for selfcad.com. I knew
+          things or two about 3d graphics programming and javascript but
+          three.js was something I had to learn from scratch. It took me few
+          weeks but I eventually catched up with this technology. After 6 months
+          I was doing mid/senior work. I got my balchelor degree in February
+          2020 after 3.5 years, with average 4.5, exemption from most of the
+          exams (including technical english C1) and over two years of
+          professional experience. It's my late debut. Now im ready for more :)
         </Paragraph>
       </Typography>
     );

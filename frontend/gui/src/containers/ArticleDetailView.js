@@ -1,9 +1,11 @@
 import React from "react";
 import axios from "axios";
-import { Button, Card } from "antd";
+import { Button, Card, Typography } from "antd";
 import ArticleForm from "../components/Form";
 import * as actions from "../store/actions/auth";
 import { connect } from "react-redux";
+
+const { Title, Paragraph, Text } = Typography;
 
 class ArticleDetail extends React.Component {
   state = {
@@ -28,17 +30,31 @@ class ArticleDetail extends React.Component {
   render() {
     return (
       <div>
-        <Card title={this.state.article.title}>
-          <p> {this.state.article.content}</p>
-          <p>
+        <Title>{this.state.article.title}</Title>
+        <Typography>
+          <Paragraph
+            style={{
+              textAlign: "left",
+              paddingTop: "17px",
+              wordSpacing: "5px",
+              textShadow: "2px 2px 5px dark-blue",
+              fontFamily: "Tahoma, Geneva, sans-serif",
+              fontWeight: "lighter",
+              fontSize: "17px",
+            }}
+          >
+            {" "}
+            {this.state.article.content}
+          </Paragraph>
+          <Paragraph>
             {" "}
             {this.state.article.created_date
               ? this.state.article.created_date.split("T")[0] +
                 " / " +
                 this.state.article.created_date.split("T")[1].split(".")[0]
               : null}
-          </p>
-        </Card>
+          </Paragraph>
+        </Typography>
         {this.props.isAuthenticated ? (
           <div>
             <br />

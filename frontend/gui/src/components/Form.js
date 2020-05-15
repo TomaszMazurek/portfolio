@@ -1,8 +1,6 @@
 import React from "react";
 import { Form, Input, Button } from "antd";
 import axios from "axios";
-import * as actions from "../store/actions/auth";
-import { connect } from "react-redux";
 
 const { TextArea } = Input;
 
@@ -86,17 +84,4 @@ class ArticleForm extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    isAuthenticated: state.token != null,
-    token: state.token,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onTryAutoSignup: () => dispatch(actions.authCheckState()),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(ArticleForm);
+export default ArticleForm;

@@ -30,10 +30,9 @@ class Projects extends React.Component {
           fontSize: "17px",
         }}
       >
-        <Title level={1} underline>
-          Projects
+        <Title level={3}>
+          Porfolio Website – Python/Django, Javascript/React
         </Title>
-        <Title level={3}>Porfolio Website</Title>
         <Paragraph>
           This website’s role is to express me as a programmer. It came into
           being in raw, basic form, but going to evolve into something more
@@ -59,11 +58,18 @@ class Projects extends React.Component {
           and launch on local machine.
         </Paragraph>
         <Paragraph>
-          <Text strong>Blog</Text> – this is be my personal blog. For now it is
-          in basic form and do not allow anything but reading it. In time i’m
+          <Text strong>Blog</Text> – this is my personal blog. For now it is in
+          basic form and do not allow anything but reading it. In time i’m
           planning to enrich it with comments for registered users, twitter and
           facebook integration (might be, not sure) and anything that will come
           into my imagination and look reasonable.
+        </Paragraph>
+        <Paragraph>
+          <Text strong>Material Editor</Text> – Early version of material
+          editor. I was able to plug it into the website thanks to Django.
+          Because of rather big library of maps and cubic textures, initial
+          loading time may be unacceptable for less patient users. After being
+          stored in browser cache, subsequent loadings are several times faster.
         </Paragraph>
         <Paragraph>
           For now this website is using following technologies:

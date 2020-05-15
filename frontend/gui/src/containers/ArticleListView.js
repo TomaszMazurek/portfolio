@@ -37,6 +37,7 @@ class ArticleList extends React.Component {
 const mapStateToProps = (state) => {
   return {
     isAuthenticated: state.token != null,
+    token: state.token,
   };
 };
 

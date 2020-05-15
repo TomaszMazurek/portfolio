@@ -8,6 +8,8 @@ from rest_framework.generics import (
 from articles.models import Article
 from .serializers import ArticleSerializer
 from rest_framework import viewsets
+from rest_framework import authentication, permissions
+
 
 """ class ArticleListView(ListAPIView):
     queryset = Article.objects.all()
@@ -35,3 +37,4 @@ class ArticleViewSet(viewsets.ModelViewSet):
     """
     serializer_class = ArticleSerializer
     queryset = Article.objects.all()
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly, permissions.DjangoModelPermissionsOrAnonReadOnly,)

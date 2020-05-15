@@ -5,6 +5,7 @@ frontend/gui/public/
 frontend/gui/build/
 backend/env/
 staticfiles/
+skey
 *.pyc
 *.log
 *.sql

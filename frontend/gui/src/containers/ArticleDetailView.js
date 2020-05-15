@@ -23,7 +23,9 @@ class ArticleDetail extends React.Component {
 
   handleDelete = (event) => {
     const articleID = this.props.match.params.articleID;
-    axios.delete(`/api/${articleID}`);
+    axios.delete(`/api/${articleID}/`, {
+      headers: { Authorization: "Token " + localStorage.getItem("token") },
+    });
     axios.Redirect("/blog");
   };
 
@@ -77,6 +79,7 @@ class ArticleDetail extends React.Component {
 const mapStateToProps = (state) => {
   return {
     isAuthenticated: state.token != null,
+    token: state.token,
   };
 };
 

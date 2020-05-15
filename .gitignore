@@ -6,6 +6,7 @@ frontend/gui/build/
 backend/env/
 backend/src/portfolio/settings.py
 staticfiles/
+
 skey
 *.pyc
 *.log

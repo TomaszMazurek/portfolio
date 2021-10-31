@@ -10,7 +10,6 @@ const { Title, Paragraph } = Typography;
 ); */
 
 const Articles = (props) => {
-  console.log("Articles props.data", Array.isArray(props.data));
   return (
     <List
       itemLayout="vertical"

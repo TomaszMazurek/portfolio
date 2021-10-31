@@ -41,7 +41,7 @@ export const authLogin = (username, password) => {
   return (dispatch) => {
     dispatch(authStart());
     axios
-      .post("/rest-auth/login/", {
+      .post(process.env.REACT_APP_ME_URL + "/rest-auth/login/", {
         username: username,
         password: password,
       })

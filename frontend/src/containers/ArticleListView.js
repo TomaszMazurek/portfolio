@@ -11,7 +11,7 @@ class ArticleList extends React.Component {
   };
 
   componentDidMount() {
-    axios.get("/api/").then((res) => {
+    axios.get(process.env.REACT_APP_ME_URL + "/api/").then((res) => {
       this.setState({
         articles: res.data,
       });

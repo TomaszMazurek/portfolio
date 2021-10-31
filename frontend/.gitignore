@@ -4,3 +4,4 @@
 *.test.js
 setupTests.js
 serviceWorker.js
+.env.development

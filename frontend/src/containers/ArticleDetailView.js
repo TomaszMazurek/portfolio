@@ -14,11 +14,13 @@ class ArticleDetail extends React.Component {
 
   componentDidMount() {
     const articleID = this.props.match.params.articleID;
-    axios.get(`/api/${articleID}`).then((res) => {
-      this.setState({
-        article: res.data,
+    axios
+      .get(process.env.REACT_APP_ME_URL + `/api/${articleID}/`)
+      .then((res) => {
+        this.setState({
+          article: res.data,
+        });
       });
-    });
   }
 
   handleDelete = (event) => {

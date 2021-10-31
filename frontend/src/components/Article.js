@@ -10,6 +10,7 @@ const { Title, Paragraph } = Typography;
 ); */
 
 const Articles = (props) => {
+  console.log("Articles props.data", Array.isArray(props.data));
   return (
     <List
       itemLayout="vertical"
@@ -18,14 +19,14 @@ const Articles = (props) => {
         onChange: (page) => {},
         pageSize: 3,
       }}
-      dataSource={props.data}
+      dataSource={Array.isArray(props.data) ? props.data : []}
       renderItem={(item) => (
         <List.Item
           key={item.title}
           actions={[
             <div>
-              {item.created_date.split("T")[0]} /{" "}
-              {item.created_date.split("T")[1].split(".")[0]}
+              {item?.created_date?.split("T")[0] ?? ""} /{" "}
+              {item?.created_date?.split("T")[1]?.split(".")[0] ?? ""}
             </div>,
           ]}
         >

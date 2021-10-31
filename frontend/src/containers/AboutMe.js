@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Divider, Button } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
-
+import CV_Tomasz_Mazurek from '../assets/media/CV_Tomasz_Mazurek.pdf'
 const { Title, Paragraph, Text } = Typography;
 
 class AboutMe extends React.Component {
@@ -36,7 +36,7 @@ class AboutMe extends React.Component {
         <Button
           type="primary"
           download
-          href="/static/media/CV_Tomasz_Mazurek.pdf"
+          href={CV_Tomasz_Mazurek}
           icon={<DownloadOutlined />}
           size="large"
           style={{ margin: "auto", color: "white" }}

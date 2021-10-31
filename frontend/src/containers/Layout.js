@@ -27,7 +27,7 @@ class MainLayout extends React.Component {
   };
 
   createBreadCrumbItems() {
-    const paths = this.props.location.pathname.split("/");
+    const paths = this.props?.location?.pathname?.split("/") || "/";
     const items = [];
     for (let i = 0; i < paths.length; i++) {
       items.push(

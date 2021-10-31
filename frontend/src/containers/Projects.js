@@ -1,5 +1,15 @@
 import React from "react";
 import { Typography, Divider } from "antd";
+import material_editor_ui from '../assets/media/me_ui.png'
+import me_react from '../assets/media/me_react.png'
+import UE4_RPG_Shooter from '../assets/media/UE4_RPG_Shooter.mp4'
+import Unity_VRSpaceShooter from '../assets/media/Unity_VRSpaceShooter.mp4'
+import pirates_sea from '../assets/media/pirates_sea.png'
+import pirates_gui from '../assets/media/pirates_gui.png'
+import trainomatic from '../assets/media/trainomatic.png'
+import RCCar_schemat from '../assets/media/schemat.jpg'
+import RCCar_board from '../assets/media/board.jpg'
+import RCCar_app from '../assets/media/app.jpg'
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -135,10 +145,10 @@ class Projects extends React.Component {
           <img
             style={{ display: "block", margin: "auto" }}
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/static/media/me_ui.png"}
+            src={material_editor_ui}
             alt="Material Editor UI"
             width="100%"
-          ></img>
+          />
           <br />
           This how this "boilerplate" looks like. As we can see UI is divided
           into sections. Every section consists of properties which are applied
@@ -173,10 +183,10 @@ class Projects extends React.Component {
           <img
             style={{ display: "block", margin: "auto" }}
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/static/media/me_react.png"}
+            src={me_react}
             alt="Material Editor UI React"
             width="100%"
-          ></img>
+          />
         </Paragraph>
         <Divider />
 
@@ -198,9 +208,9 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
           >
             <source
-              src={process.env.PUBLIC_URL + "/static/media/UE4_RPG_Shooter.mp4"}
+              src={UE4_RPG_Shooter}
               type="video/mp4"
-            ></source>
+            />
             Your browser does not support HTML video.
           </video>
         </Paragraph>
@@ -214,10 +224,7 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
           >
             <source
-              src={
-                process.env.PUBLIC_URL +
-                "/static/media/Unity_VRSpaceShooter.mp4"
-              }
+              src={Unity_VRSpaceShooter}
               type="video/mp4"
             ></source>
             Your browser does not support HTML video.
@@ -235,9 +242,9 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             width="80%"
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/static/media/pirates_gui.png"}
+            src={pirates_gui}
             alt="Pirates Ship Simulation GUI"
-          ></img>
+          />
           <br />
           GUI of the program lets user set following simulation parameters.
           <ul>
@@ -258,9 +265,9 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             width="100%"
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/static/media/pirates_sea.png"}
+            src={pirates_sea}
             alt="Pirates Ship Simulation Sea"
-          ></img>
+          />
           <br />
           As we can see, pirate ship patrol given area and try to pursue the
           cargo ship when overlaps it at some determined distance. At the same
@@ -287,9 +294,9 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             width="100%"
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/static/media/trainomatic.png"}
+            src={trainomatic}
             alt="Train-o-matic"
-          ></img>
+          />
           <br />
           Main sections in aplication.
           <ul>
@@ -352,9 +359,9 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             width="100%"
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/static/media/schemat.jpg"}
+            src={RCCar_schemat}
             alt="RCCar scheme"
-          ></img>
+          />
         </Paragraph>
         <Paragraph>
           Parts used:
@@ -374,9 +381,9 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             width="100%"
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/static/media/board.jpg"}
+            src={RCCar_board}
             alt="RCCar scheme"
-          ></img>
+          />
         </Paragraph>
 
         <Paragraph>
@@ -391,9 +398,9 @@ class Projects extends React.Component {
             style={{ display: "block", margin: "auto" }}
             width="100%"
             id="me_ui"
-            src={process.env.PUBLIC_URL + "/static/media/app.jpg"}
+            src={RCCar_app}
             alt="RCCar scheme"
-          ></img>
+          />
           <br />
           <ul>
             <li>FB (Forward/Backward) – speed value</li>

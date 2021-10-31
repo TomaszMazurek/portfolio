@@ -1,11 +1,11 @@
 import React from "react";
 import axios from "axios";
-import { Button, Card, Typography } from "antd";
+import { Button, Typography } from "antd";
 import ArticleForm from "../components/Form";
 import * as actions from "../store/actions/auth";
 import { connect } from "react-redux";
 
-const { Title, Paragraph, Text } = Typography;
+const { Title, Paragraph } = Typography;
 
 class ArticleDetail extends React.Component {
   state = {

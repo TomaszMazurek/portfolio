@@ -11,6 +11,7 @@ setupTests.js
 serviceWorker.js
 .env.development
 *.mp4
+.env.production
 
 skey
 *.pyc

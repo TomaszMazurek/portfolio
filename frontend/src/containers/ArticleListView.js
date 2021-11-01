@@ -1,38 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Articles from "../components/Article";
 import ArticleForm from "../components/Form";
 import * as actions from "../store/actions/auth";
 import { connect } from "react-redux";
 
-class ArticleList extends React.Component {
-  state = {
-    articles: [],
-  };
+const ArticleList = (props) => {
+  const [articles, setArticles] = useState([]);
 
-  componentDidMount() {
+  useEffect(() => {
     axios.get(process.env.REACT_APP_ME_URL + "/api/").then((res) => {
-      this.setState({
-        articles: res.data,
-      });
+      setArticles(res.data);
     });
-  }
-
-  render() {
-    return (
-      <div>
-        <Articles data={this.state.articles} />
-        {this.props.isAuthenticated ? (
-          <React.Fragment>
-            <br />
-            <h2> Create an article </h2>
-            <ArticleForm requestType="post" articleID={null} btnText="Create" />
-          </React.Fragment>
-        ) : null}
-      </div>
-    );
-  }
-}
+  }, []);
+  return (
+    <div>
+      <Articles data={articles} />
+      {props.isAuthenticated ? (
+        <React.Fragment>
+          <br />
+          <h2> Create an article </h2>
+          <ArticleForm requestType="post" articleID={null} btnText="Create" />
+        </React.Fragment>
+      ) : null}
+    </div>
+  );
+};
 
 const mapStateToProps = (state) => {
   return {

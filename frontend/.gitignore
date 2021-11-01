@@ -1,7 +1,0 @@
-/build
-/node_modules
-/public
-*.test.js
-setupTests.js
-serviceWorker.js
-.env.development

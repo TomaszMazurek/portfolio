@@ -15,7 +15,7 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "renamer": "^2.0.0",
-    "three": "^0.125.0"
+    "three": "^0.137.0"
   },
   "scripts": {
     "start": "react-scripts start",

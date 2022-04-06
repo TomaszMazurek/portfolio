@@ -4,62 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f752c56-a5f4-460f-a8a9-596ce10b9ae4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/media/UE4_RPG_Shooter.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/media/Unity_VRSpaceShooter.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/media/app.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/media/board.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/media/me_react.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/media/me_ui.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/media/pirates_gui.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/media/pirates_sea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/media/schemat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/media/trainomatic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/service-worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/static/js/runtime-main.7e4b9196.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/build/static/js/runtime-main.7e4b9196.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/components/Article.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/components/Form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/containers/AboutMe.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/containers/ArticleDetailView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/containers/ArticleListView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/containers/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/containers/Layout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/containers/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/containers/Projects.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/containers/Signup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/store/actions/actionTypes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/store/actions/auth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/store/reducers/auth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/src/store/utility.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gui/yarn.lock" beforeDir="false" />
-    </list>
+    <list default="true" id="7f752c56-a5f4-460f-a8a9-596ce10b9ae4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,6 +12,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1brqG2ZMsOMOmZDwYHI2CJZ5mon" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -103,6 +51,7 @@
       <workItem from="1635688985038" duration="2202000" />
       <workItem from="1635694686311" duration="3000" />
       <workItem from="1635694755016" duration="9000" />
+      <workItem from="1645350277260" duration="37000" />
     </task>
     <servers />
   </component>

@@ -1,27 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import "antd/dist/antd.compact.css";
+import "antd/dist/antd.css";
 import "./App.css";
-import MainLayout from "./containers/Layout";
-import { BrowserRouter as Router } from "react-router-dom";
+import MainLayout from "./common/components/Layout";
+import { BrowserRouter } from "react-router-dom";
 import BaseRouter from "./routes";
-import * as actions from "./store/actions/auth";
+import * as actions from "./auth/store/actions/actionCreators";
+import { Layout } from "antd";
+import Logo from "./common/components/Logo";
+import Menu from "./common/components/Menu";
+const { Header, Footer } = Layout;
 
-class App extends React.Component {
-  componentDidMount() {
-    this.props.onTryAutoSignup();
-  }
+const App = (props) => {
+  useEffect(() => {
+    props.onTryAutoSignup();
+  }, []);
 
-  render() {
-    return (
-      <Router>
-        <MainLayout {...this.props}>
-          <BaseRouter />
-        </MainLayout>
-      </Router>
-    );
-  }
-}
+  return (
+    <BrowserRouter>
+      <Header id="header" className="header">
+        <Logo />
+        <Menu />
+      </Header>
+      <MainLayout {...props}>
+        <BaseRouter />
+      </MainLayout>
+      <Footer
+        id="footer"
+        style={{
+          backgroundColor: "rgb(0,21,41)",
+          color: "rgb(220,220,220,0.65)",
+          textAlign: "center",
+          fontSize: 20,
+        }}
+      >
+        Tomasz Mazurek ©2022 Created by Tomasz Mazurek
+      </Footer>
+    </BrowserRouter>
+  );
+};
 
 const mapStateToProps = (state) => {
   return {

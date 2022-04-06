@@ -1,23 +1,26 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import ArticleList from "./containers/ArticleListView";
-import ArticleDetail from "./containers/ArticleDetailView";
-import Login from "./containers/Login";
-//import Signup from "./containers/Signup";
-import AboutMe from "./containers/AboutMe";
-import Projects from "./containers/Projects";
-import Home from "./containers/Home";
+import { Route, Routes } from "react-router-dom";
+import ArticleList from "./blog/components/ArticleListView";
+import ArticleDetail from "./blog/components/ArticleDetailView";
+import Login from "./auth/components/Login";
+//import Signup from "./scene/Signup";
+
+import AboutMe from "./about/containers/AboutMe";
+import Projects from "./projects/components/Projects";
+import Canvas from "./materialEditor/scene/components/Canvas";
+import Home from "./home/components/Home";
 
 const BaseRouter = () => (
-  <div>
-    <Route exact path="/" component={Home} />{" "}
-    <Route exact path="/aboutme/" component={AboutMe} />{" "}
-    <Route exact path="/projects/" component={Projects} />{" "}
-    <Route exact path="/blog/" component={ArticleList} />{" "}
-    <Route exact path="/blog/:articleID" component={ArticleDetail} />{" "}
-    <Route exact path="/login/" component={Login} />{" "}
-    {/* <Route exact path="/signup/" component={Signup} />{" "} */}
-  </div>
+  <Routes>
+    <Route exact path="/" element={<Home />} />{" "}
+    <Route exact path="/aboutme/" element={<AboutMe />} />{" "}
+    <Route exact path="/projects/" element={<Projects />} />{" "}
+    <Route exact path="/blog/" element={<ArticleList />} />{" "}
+    <Route exact path="/blog/:articleID" element={<ArticleDetail />} />{" "}
+    <Route exact path="/materialEditor/" element={<Canvas />} />{" "}
+    <Route exact path="/login/" element={<Login />} />{" "}
+    {/* <Route exact path="/signup/" element={Signup} />{" "} */}
+  </Routes>
 );
 
 export default BaseRouter;
